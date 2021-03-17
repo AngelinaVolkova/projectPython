@@ -1,3 +1,4 @@
+import 
 class Post:
     def post(self, name, text, genre, data) -> object:
         self.name = name
@@ -22,8 +23,8 @@ death = Post()
 death.post('Death Note', 'Жить человеку или не жить опредиляют боги смерти,рано или поздно внося его имя в '
                          'собственную тетрадь. Одна из таких тетрадей попадает в мир людей на территорию современной ''Японии. А что случится, если тетрадь бога Death Note окажется''в руках человека? Ответ очевиден: он возомнит себя богом.''Это происходит с Ягами Лайтом', 'фантастика, ужасы', '2006')
 print(death.name + ' ' + death.text + ' ' + death.genre + ' ' + death.data)
-import pickle
-my_class = Post()
-my_pickled_class = pickle.dumps(my_class)
-print(f'This anime:\n{my_pickled_class}\n')
-
+with open('Post.pickle', 'wb') as task_pickle:
+    pickle.dump(titan, task_pickle)
+    pickle.dump(gul, task_pickle)
+    pickle.dump(death, task_pickle)
+    
